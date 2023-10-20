@@ -1,0 +1,276 @@
+{
+	"info": {
+		"_postman_id": "94d77c9f-c1f8-477d-93b3-362d6cee9d7f",
+		"name": "API_address",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21555044",
+		"_collection_link": "https://restless-astronaut-125243.postman.co/workspace/My-Workspace~9ed23de8-65d0-412f-8d88-487c0ef6229e/collection/21555044-94d77c9f-c1f8-477d-93b3-362d6cee9d7f?action=share&source=collection_link&creator=21555044"
+	},
+	"item": [
+		{
+			"name": "get-shipping-address",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3Rlc3QtcG9zLmRpZ2liaXJkLmlvL2FwaS92MS9mcm9udC9sb2dpbiIsImlhdCI6MTY4OTIzMDE5NywiZXhwIjoxNjg5MjUyMDk3LCJuYmYiOjE2ODkyMzAxOTcsImp0aSI6Im52dnFuVTNyVUpuaDJJMWMiLCJzdWIiOiI1IiwicHJ2IjoiMWQwYTAyMGFjZjVjNGI2YzQ5Nzk4OWRmMWFiZjBmYmQ0ZThjOGQ2MyJ9.O4Bw3xZdETUkUsQ7RSlxdJL7cKxELhOy6pOOK2RUCuc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://test-pos.digibird.io/api/v1/front/self/address?fields=id,xid,name,email,phone,address,shipping_address,city,state,country",
+					"protocol": "https",
+					"host": [
+						"test-pos",
+						"digibird",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"front",
+						"self",
+						"address"
+					],
+					"query": [
+						{
+							"key": "fields",
+							"value": "id,xid,name,email,phone,address,shipping_address,city,state,country"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add-shipping-address",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2NvbXBhc3Npb25hdGUtd2lsYnVyLjY4LTE4My0xNzgtMTQ2LnBsZXNrLnBhZ2UvYXBpL3YxL2Zyb250L2xvZ2luIiwiaWF0IjoxNjg3NDIyNzMwLCJleHAiOjE2ODc0NDQ2MzAsIm5iZiI6MTY4NzQyMjczMCwianRpIjoiZEVBVHEwcUlRbkFTUWxkUiIsInN1YiI6IjM0IiwicHJ2IjoiMWQwYTAyMGFjZjVjNGI2YzQ5Nzk4OWRmMWFiZjBmYmQ0ZThjOGQ2MyJ9.1VpiKw7MH94APf4bkhwzS-sPnPfufqRxhkPjrDazp4g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "duc anh",
+							"description": "họ tên của bạn",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "zdickens@example.com",
+							"description": "email của bạn",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "0031582484",
+							"description": "sđt nhận hàng",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "22 đường số 7",
+							"description": "địa chỉ hiện tại",
+							"type": "text"
+						},
+						{
+							"key": "shipping_address",
+							"value": "99 Tạ Hiện ",
+							"description": "địa chỉ nhận hàng",
+							"type": "text"
+						},
+						{
+							"key": "zipcode",
+							"value": "1",
+							"description": "(trường này set defaut)",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "Hồ Chí Minh",
+							"description": "thành phố",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "quận 2",
+							"description": "quận/huyện",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "VN",
+							"description": "quốc gia",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://test-pos.digibird.io/api/v1/front/self/address",
+					"protocol": "https",
+					"host": [
+						"test-pos",
+						"digibird",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"front",
+						"self",
+						"address"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit-shipping-address",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2NvbXBhc3Npb25hdGUtd2lsYnVyLjY4LTE4My0xNzgtMTQ2LnBsZXNrLnBhZ2UvYXBpL3YxL2Zyb250L3NpZ24tdXAtemFsbyIsImlhdCI6MTY4Njc5OTM2MiwiZXhwIjoxNjg2ODIxMjYyLCJuYmYiOjE2ODY3OTkzNjIsImp0aSI6IjdJRUVraFV6VHZnb1Z1djIiLCJzdWIiOiIxMDkiLCJwcnYiOiIxZDBhMDIwYWNmNWM0YjZjNDk3OTg5ZGYxYWJmMGZiZDRlOGM4ZDYzIn0.rugaWoqnauxH8zT60ecI4PXCr9BQVX4_XLKi8Lynfrg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Anh sadasdasdasd",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "zdickens@example.com",
+							"description": "email dang ky tk",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "021345684846",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "22 duong so 7",
+							"type": "text"
+						},
+						{
+							"key": "shipping_address",
+							"value": "giao hang cho anh",
+							"type": "text"
+						},
+						{
+							"key": "zipcode",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "Ho Chi Minh",
+							"description": "thành phố",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "quan 2",
+							"description": "quận/huyện",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "VN",
+							"description": "quốc gia",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://test-pos.digibird.io/api/v1/front/self/address/Jlq1nbR6",
+					"protocol": "https",
+					"host": [
+						"test-pos",
+						"digibird",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"front",
+						"self",
+						"address",
+						"Jlq1nbR6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "0869017747",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Phát",
+							"type": "text"
+						},
+						{
+							"key": "company_id",
+							"value": "9",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://dev-pos.digibird.io/api/v1/front/sign-up-zalo",
+					"protocol": "https",
+					"host": [
+						"dev-pos",
+						"digibird",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"front",
+						"sign-up-zalo"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
